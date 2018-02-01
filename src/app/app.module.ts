@@ -5,21 +5,35 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
+import { BarraPage } from '../pages/pages';
+import { InicioPage } from '../pages/inicio/inicio';
+import { ChatPage } from '../pages/chat/chat';
+import { PersonajePage } from '../pages/personaje/personaje';
+import { AjustesPage } from '../pages/ajustes/ajustes';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    BarraPage,
+    InicioPage,
+    ChatPage,
+    PersonajePage,
+    AjustesPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp, {
+      backButtonText: 'Volver',
+    })
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    BarraPage,
+    InicioPage,
+    ChatPage,
+    PersonajePage,
+    AjustesPage
   ],
   providers: [
     StatusBar,
